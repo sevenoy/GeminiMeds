@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Calendar, Clock, Image as ImageIcon, Search } from 'lucide-react';
 import { Medication, MedicationLog } from '../types';
 import { getMedications, getMedicationLogs } from '../db/localDB';
-import { formatTime, formatDate } from '../utils/exif';
+import { formatTime } from '../utils/exif';
 
 export const HistoryPage: React.FC = () => {
     const [medications, setMedications] = useState<Medication[]>([]);

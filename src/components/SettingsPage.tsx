@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { User, Mail, LogOut, Download, Upload, Trash2 } from 'lucide-react';
-import { supabase, getCurrentUserId } from '../lib/supabase';
+import { supabase } from '../lib/supabase';
 import { cloudSaveV2, cloudLoadV2, applySnapshot } from '../services/sync';
 import { db } from '../db/localDB';
 import { NotificationToggle } from './NotificationToggle';

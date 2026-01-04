@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Camera, X, Check } from 'lucide-react';
-import { extractExifTime, calculateLogStatus, formatTime } from '../utils/exif';
+import { extractExifTime, calculateLogStatus } from '../utils/exif';
 import { calculateImageHash, compressImage, generateUUID } from '../utils';
 import { Medication, MedicationLog } from '../types';
 

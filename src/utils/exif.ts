@@ -1,4 +1,4 @@
-import { ExifResult, TimeSource } from '../types';
+import { ExifResult } from '../types';
 
 // @ts-ignore - exif-js doesn't have proper types
 import EXIF from 'exif-js';
@@ -8,6 +8,7 @@ export async function extractExifTime(imageData: string): Promise<ExifResult> {
         const img = new Image();
 
         img.onload = () => {
+            // @ts-expect-error - exif-js type definitions are incorrect
             EXIF.getData(img, function (this: any) {
                 const dateTime = EXIF.getTag(this, 'DateTime') ||
                     EXIF.getTag(this, 'DateTimeOriginal') ||

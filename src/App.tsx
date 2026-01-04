@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Plus, Camera, Clock, Calendar } from 'lucide-react';
 import { CameraModal } from './components/CameraModal';
 import { LoginPage } from './components/LoginPage';
